@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Day 3 Assignment </title>
+    </head>
+    <body>
+        <h2>Write a program to take marks as input from the user and grade him accordingly. Use Conditional
+            statements. Also the same code using switch or ternary
+            input: 50
+            Output : Marks are 50 and grade is B</h2>
+
+            <script>
+                var mark=Number(prompt("enter marks"));
+                
+                //using Conditional Statement
+                console.log("using Conditional Statement if-else if-else");
+                if(mark>=75 && mark<=100)
+                {
+                    console.log('Marks are '+mark+' and grade is A');
+                    
+                }
+                else if(mark>=50 && mark<75)
+                {
+                    console.log('Marks are '+mark+' and grade is B');
+                }
+                else if(mark<50 && mark>=0){
+                    console.log('Marks are '+mark+' and grade is C')
+                }
+                else{
+                    console.log('  You Enter invalid marks');
+                }
+
+                //USing  Ternary
+                console.log("using Ternary");
+                var result=(mark>=75 && mark<=100) ? 'Marks are '+mark+' and garde is A':(mark>=50 && mark<75)? 'Marks are '+mark+' and garde is B':(mark>=0 && mark<50)?'Marks are '+mark+' and garde is B':'you entered invalide marks'
+                console.log(result);
+
+            </script>
+    </body>
+</html>
