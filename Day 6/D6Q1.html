@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="text/javascript">
+        var c = ["blue", "black", "yellow", "red","cyan"];
+      
+        function changeColor() {
+          setTimeout(function loop() {
+            document.bgColor = c.shift();
+            if (c.length) {
+              setTimeout(loop, 5000);
+            }
+          }, 5000);
+        }
+      
+        function start() {
+          setInterval(changeColor(), 20000);
+        }
+      </script>
+      </head>
+      <body onload="start()">
+      </body>
+</html>

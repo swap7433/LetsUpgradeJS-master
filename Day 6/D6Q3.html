@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<style>
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+</style>
+
+
+<script> 
+function printMessage(){
+    Name=document.getElementById('name').value;
+
+					var pTag= document.getElementById('pPrint');
+					pTag.innerHTML +=" Welcome "+Name + "<br/>" 
+				
+			}
+
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+
+
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+
+
+</script>
+
+</head>
+
+<body>
+
+    <h1>JavaScript - Function to Display Table of Welcome Message, clock, and Dark mode.</h1>
+    <p><input type="text" id="name" placeholder="Enter Name"/></p>
+    <p><input type="button" value="Print Message." onclick='printMessage()'/>
+    <!--print numbers-->
+    <p id="pPrint"></p>
+
+    <br/>
+    <body onload="startTime()">
+
+        <div id="txt"></div>
+
+
+        <button onclick="myFunction()">Try it</button>
+
+
+</body>
+</html>
